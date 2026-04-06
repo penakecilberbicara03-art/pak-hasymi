@@ -1,28 +1,16 @@
-// JavaScript code to filter and render activities
+// JavaScript code for portfolio functionality
 
-const activities = [
-    { id: 1, name: 'Yoga', type: 'Wellness' },
-    { id: 2, name: 'Cooking Class', type: 'Culinary' },
-    { id: 3, name: 'Running', type: 'Fitness' },
-    { id: 4, name: 'Painting', type: 'Creative' },
-];
-
-// Function to filter activities by type
-function filterActivities(type) {
-    return activities.filter(activity => activity.type === type);
-}
-
-// Function to render activities
-function renderActivities(filteredActivities) {
-    const activityList = document.getElementById('activity-list');
-    activityList.innerHTML = ''; // Clear existing activities
-    filteredActivities.forEach(activity => {
-        const listItem = document.createElement('li');
-        listItem.textContent = activity.name;
-        activityList.appendChild(listItem);
+// Example: Function to display portfolio items
+function displayPortfolioItems(items) {
+    items.forEach(item => {
+        console.log(`Title: ${item.title}, Description: ${item.description}`);
     });
 }
 
-// Example usage
-const wellnessActivities = filterActivities('Wellness');
-renderActivities(wellnessActivities);
+// Example portfolio items
+const portfolioItems = [
+    { title: 'Project One', description: 'Description of Project One' },
+    { title: 'Project Two', description: 'Description of Project Two' }
+];
+
+displayPortfolioItems(portfolioItems);
